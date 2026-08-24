@@ -45,7 +45,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-transpiler-mate-api = [
+transpiler-mate = [
   "transpiler-mate-api @ git+https://github.com/sim13pods/transpiler-mate-api.git@main",
 ]
 
@@ -62,9 +62,6 @@ Documentation = "{{ documentation_url }}"
 Repository = "{{ repository_url }}"
 Issues = "{{ repository_url }}/issues"
 Changelog = "{{ repository_url }}/blob/main/CHANGELOG.md"
-
-[project.scripts]
-{{ python_package }} = "{{ python_package }}.cli:main"
 
 [tool.hatch.version]
 path = "src/{{ python_package }}/__about__.py"
