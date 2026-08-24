@@ -1,0 +1,71 @@
+# Copyright 2026 Terradue
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_min_copier_version: "9.0.0"
+_subdirectory: "template"
+_templates_suffix: ".jinja"
+
+_message_after_copy: |
+  Project {{ project_name }} has been generated.
+
+  Next steps:
+    cd {{ _copier_conf.dst_path }}
+    cp .env.example .env
+    hatch env create
+    task quality
+
+project_name:
+  type: str
+  help: Human-readable project name
+  default: "My Python Project"
+
+project_slug:
+  type: str
+  help: Repository/package distribution name, e.g. my-python-project
+  default: "{{ project_name|lower|replace(' ', '-')|replace('_', '-') }}"
+
+python_package:
+  type: str
+  help: Importable Python package name, e.g. my_python_project
+  default: "{{ project_slug|replace('-', '_') }}"
+
+project_description:
+  type: str
+  help: One-line project description
+  default: "A Python project generated from the Transpiler-Mate Plugin Python archetype."
+
+author_name:
+  type: str
+  help: Author or organization name
+  default: "Transpiler-Mate"
+
+author_email:
+  type: str
+  help: Author contact email
+  default: "info@terradue.com"
+
+repository_url:
+  type: str
+  help: GitHub repository URL
+  default: "https://github.com/{{ author_name }}/{{ project_slug }}"
+
+documentation_url:
+  type: str
+  help: Published documentation URL
+  default: "https://{{ author_name }}.github.io/{{ project_slug }}/"
+
+copyright_year:
+  type: str
+  help: Copyright year
+  default: "2026"
