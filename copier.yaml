@@ -28,7 +28,7 @@ _message_after_copy: |
 project_name:
   type: str
   help: Human-readable project name
-  default: "My Python Project"
+  default: "My Transpiler-Mate Plugin"
 
 project_slug:
   type: str
@@ -43,7 +43,7 @@ python_package:
 project_description:
   type: str
   help: One-line project description
-  default: "A Python project generated from the Transpiler-Mate Plugin Python archetype."
+  default: "{{ project_name }} Transpiler-Mate Plugin."
 
 author_name:
   type: str
