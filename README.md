@@ -1,5 +1,5 @@
 <!--
-Copyright 2026 EOAP
+Copyright 2026 Transpiler-Mate
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -14,14 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-# EOAP Python Project Template
+# Transpiler-Mate Plugin Python Project Template
 
-This repository is a reusable **Copier project archetype** for bootstrapping EOAP-style Python packages.
+This repository is a reusable **Copier project archetype** for bootstrapping Transpiler-Mate Plugin-style Python packages.
 
 It is intended to be deployed as a dedicated GitHub repository, for example:
 
 ```text
-EOAP/python-project-template
+Transpiler-Mate/transpiler-mate-plugin-project-template
 ```
 
 Generated projects include:
@@ -32,7 +32,7 @@ Generated projects include:
 - a top-level `CHANGELOG.md` following Keep a Changelog conventions;
 - Diátaxis documentation under `docs/`;
 - a top-level `mkdocs.yaml` wired directly to the generated documentation;
-- a `Taskfile.yaml` configured for `EOAP/taskfile-utils` remote Taskfiles;
+- a `Taskfile.yaml` configured for `Transpiler-Mate Plugin/taskfile-utils` remote Taskfiles;
 - a `.env` enabling remote Taskfiles with `TASK_X_REMOTE_TASKFILES=1`;
 - GitHub Actions for quality checks, tests, package build, and documentation build;
 - a `src/` package layout and initial tests.
@@ -80,7 +80,7 @@ Install Task if you want to use the generated `Taskfile.yaml` locally. Follow yo
 Create an empty GitHub repository, for example:
 
 ```text
-https://github.com/EOAP/python-project-template
+https://github.com/Transpiler-Mate/transpiler-mate-plugin-project-template
 ```
 
 Then push this archetype into it:
@@ -90,7 +90,7 @@ git init
 git add .
 git commit -m "Initial Python project template"
 git branch -M main
-git remote add origin git@github.com:EOAP/python-project-template.git
+git remote add origin git@github.com:Transpiler-Mate/python-project-template.git
 git push -u origin main
 ```
 
@@ -110,7 +110,7 @@ Prefer generating projects from a tag rather than directly from `main`.
 From another directory, run:
 
 ```bash
-copier copy --vcs-ref v0.5.0 https://github.com/eoap/python-project-template.git stripodi-test
+copier copy --vcs-ref main https://github.com/Transpiler-Mate/transpiler-mate-plugin-project-template.git stripodi-test
 ```
 
 Copier will ask for project metadata such as project name, package name, author, repository URL, and documentation URL.
@@ -202,7 +202,6 @@ The main variables are defined in `copier.yaml`:
 | `repository_url` | Source repository URL. |
 | `documentation_url` | Published documentation URL. |
 | `copyright_year` | Year used in generated source headers. |
-| `license_id` | SPDX license identifier; default is `Apache-2.0`. |
 
 ## Development workflow for this archetype
 
