@@ -26,7 +26,6 @@ coverage.xml
 .ruff_cache/
 
 # Environments
-.env
 .venv/
 
 # MkDocs
@@ -36,3 +35,6 @@ site/
 .idea/
 .vscode/
 .DS_Store
+
+.task
+uv.lock
