@@ -34,10 +34,11 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ### Security
 
-## [0.1.0] - 2026-XX-XX
+## [0.1.0] - 2026-08-31
 
 ### Added
 
 - Initial deployment-ready Copier archetype layout using a top-level `template/` directory.
 
 [Unreleased]: https://github.com/Transpiler-Mate/transpiler-mate-plugin-project-template/
+[0.1.0]: https://github.com/Transpiler-Mate/transpiler-mate-plugin-project-template/releases/tag/v0.1.0
