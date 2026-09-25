@@ -157,6 +157,9 @@ dependencies = [
 # Ruff
 # ---------------------------------------------------------------------------
 
+[tool.ruff]
+line-length = 100
+
 [tool.ruff.lint]
 # Start with the essential rules
 select = [
@@ -294,4 +297,11 @@ check = [
   "mypy {args:src tests scripts}",
   "bandit -r {args:src scripts}",
   "pytest {args:tests}",
+]
+
+# Preserve editable-install test extras and uv's local wheel resolution.
+[project.optional-dependencies]
+test = [
+  "pytest>=8.4,<10",
+  "pytest-cov>=6.2,<8"
 ]
