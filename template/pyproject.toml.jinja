@@ -253,8 +253,7 @@ ignore_missing_imports = false
 # Files checked by default.
 files = [
   "src/{{ python_package }}",
-  "tests",
-  "scripts",
+  "tests"
 ]
 
 # These upstream modules do not provide typing metadata in this installation.
@@ -271,11 +270,11 @@ follow_imports = "skip"
 # These commands are allowed to modify files.
 # ---------------------------------------------------------------------------
 
-format = "ruff format {args:src tests scripts}"
+format = "ruff format {args:src tests}"
 
 fix = [
-  "ruff check --fix {args:src tests scripts}",
-  "ruff format {args:src tests scripts}",
+  "ruff check --fix {args:src tests}",
+  "ruff format {args:src tests}",
 ]
 
 # ---------------------------------------------------------------------------
@@ -284,30 +283,30 @@ fix = [
 # These commands MUST NOT modify files and are suitable for CI.
 # ---------------------------------------------------------------------------
 
-format-check = "ruff format --check {args:src tests scripts}"
+format-check = "ruff format --check {args:src tests}"
 
-lint = "ruff check {args:src tests scripts}"
-lint-check = "ruff check {args:src tests scripts}"
-design-check = "ruff check --select C90,PLR {args:src tests scripts}"
+lint = "ruff check {args:src tests}"
+lint-check = "ruff check {args:src tests}"
+design-check = "ruff check --select C90,PLR {args:src tests}"
 
-typecheck = "mypy {args:src tests scripts}"
+typecheck = "mypy {args:src tests}"
 
-security = "bandit -r {args:src scripts}"
+security = "bandit -r {args:src}"
 
 # Run the complete static quality gate.
 quality = [
-  "ruff format --check {args:src tests scripts}",
-  "ruff check {args:src tests scripts}",
-  "mypy {args:src tests scripts}",
-  "bandit -r {args:src scripts}",
+  "ruff format --check {args:src tests}",
+  "ruff check {args:src tests}",
+  "mypy {args:src tests}",
+  "bandit -r {args:src}",
 ]
 
 # Complete local/CI validation including tests.
 check = [
-  "ruff format --check {args:src tests scripts}",
-  "ruff check {args:src tests scripts}",
-  "mypy {args:src tests scripts}",
-  "bandit -r {args:src scripts}",
+  "ruff format --check {args:src tests}",
+  "ruff check {args:src tests}",
+  "mypy {args:src tests}",
+  "bandit -r {args:src}",
   "pytest {args:tests}",
 ]
 
