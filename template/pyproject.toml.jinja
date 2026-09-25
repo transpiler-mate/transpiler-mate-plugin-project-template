@@ -49,8 +49,16 @@ dependencies = [
   "loguru==0.7.3"
 ]
 
+# ---------------------------------------------------------------------------
+# Transpiler Mate plugin entry point
+# ---------------------------------------------------------------------------
+
 [project.entry-points."transpiler_mate.plugins"]
 {{ project_slug }} = "{{ python_package }}.plugin:{{ python_package }}"
+
+# ---------------------------------------------------------------------------
+# Project Refs
+# ---------------------------------------------------------------------------
 
 [project.urls]
 Homepage = "{{ repository_url }}"
