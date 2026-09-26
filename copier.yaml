@@ -48,7 +48,7 @@ project_description:
 author_name:
   type: str
   help: Author or organization name
-  default: "Transpiler-Mate"
+  default: "Terraude"
 
 author_email:
   type: str
@@ -58,12 +58,12 @@ author_email:
 repository_url:
   type: str
   help: GitHub repository URL
-  default: "https://github.com/{{ author_name }}/{{ project_slug }}"
+  default: "https://github.com/Transpiler-Mate/{{ project_slug }}"
 
 documentation_url:
   type: str
   help: Published documentation URL
-  default: "https://{{ author_name }}.github.io/{{ project_slug }}/"
+  default: "https://Transpiler-Mate.github.io/{{ project_slug }}/"
 
 copyright_year:
   type: str
